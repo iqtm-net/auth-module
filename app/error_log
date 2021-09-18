@@ -1,0 +1,780 @@
+[12-Sep-2020 20:28:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Admin.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Admin.php on line 12
+[12-Sep-2020 20:28:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Article.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Article.php on line 12
+[12-Sep-2020 20:28:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Credits_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Credits_order.php on line 12
+[12-Sep-2020 20:28:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver.php on line 12
+[12-Sep-2020 20:28:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php on line 12
+[12-Sep-2020 20:28:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Event.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Event.php on line 12
+[12-Sep-2020 20:28:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Fee.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Fee.php on line 12
+[12-Sep-2020 20:28:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_cart.php on line 12
+[12-Sep-2020 20:28:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_order.php on line 12
+[12-Sep-2020 20:28:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd.php on line 12
+[12-Sep-2020 20:28:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php on line 12
+[12-Sep-2020 20:28:47 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php on line 12
+[12-Sep-2020 20:28:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php on line 12
+[12-Sep-2020 20:29:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/New_data_counter.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/New_data_counter.php on line 12
+[12-Sep-2020 20:29:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Notification.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Notification.php on line 12
+[12-Sep-2020 20:29:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer.php on line 12
+[12-Sep-2020 20:29:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer_rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer_rate.php on line 12
+[12-Sep-2020 20:29:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_branch.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_branch.php on line 12
+[12-Sep-2020 20:29:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_favourite.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_favourite.php on line 12
+[12-Sep-2020 20:29:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_order.php on line 12
+[12-Sep-2020 20:29:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php on line 12
+[12-Sep-2020 20:29:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_handeler.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_handeler.php on line 12
+[12-Sep-2020 20:29:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php on line 11
+[12-Sep-2020 20:29:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_black_list.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_black_list.php on line 12
+[12-Sep-2020 20:29:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_group.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_group.php on line 12
+[12-Sep-2020 20:29:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Prod_price_local.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Prod_price_local.php on line 12
+[12-Sep-2020 20:29:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Rate.php on line 12
+[12-Sep-2020 20:29:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver.php on line 12
+[12-Sep-2020 20:29:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver_history.php on line 12
+[12-Sep-2020 20:29:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php on line 12
+[12-Sep-2020 20:29:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Report.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Report.php on line 12
+[12-Sep-2020 20:29:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/States_option.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/States_option.php on line 12
+[12-Sep-2020 20:29:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Store.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Store.php on line 12
+[12-Sep-2020 20:29:55 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User.php on line 12
+[12-Sep-2020 20:29:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User_order.php on line 12
+[12-Sep-2020 20:30:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Withdraw_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Withdraw_order.php on line 12
+[12-Sep-2020 20:30:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t1.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t1.php on line 9
+[12-Sep-2020 20:30:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t2.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t2.php on line 9
+[12-Sep-2020 20:30:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/prod_price.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/prod_price.php on line 12
+[12-Sep-2020 21:00:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd.php on line 12
+[12-Sep-2020 21:00:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User.php on line 12
+[12-Sep-2020 21:00:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Fee.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Fee.php on line 12
+[12-Sep-2020 21:00:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer.php on line 12
+[12-Sep-2020 21:00:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Event.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Event.php on line 12
+[12-Sep-2020 21:00:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Rate.php on line 12
+[12-Sep-2020 21:00:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Admin.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Admin.php on line 12
+[12-Sep-2020 21:00:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Report.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Report.php on line 12
+[12-Sep-2020 21:00:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Store.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Store.php on line 12
+[12-Sep-2020 21:00:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver.php on line 12
+[12-Sep-2020 21:00:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php on line 12
+[12-Sep-2020 21:00:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t1.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t1.php on line 9
+[12-Sep-2020 21:00:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Article.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Article.php on line 12
+[12-Sep-2020 21:00:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t2.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t2.php on line 9
+[12-Sep-2020 21:00:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver.php on line 12
+[12-Sep-2020 21:01:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/prod_price.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/prod_price.php on line 12
+[12-Sep-2020 21:01:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer_rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer_rate.php on line 12
+[12-Sep-2020 21:01:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User_order.php on line 12
+[12-Sep-2020 21:01:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_group.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_group.php on line 12
+[12-Sep-2020 21:01:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_handeler.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_handeler.php on line 12
+[12-Sep-2020 21:01:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Notification.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Notification.php on line 12
+[12-Sep-2020 21:01:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_black_list.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_black_list.php on line 12
+[12-Sep-2020 21:01:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_order.php on line 12
+[12-Sep-2020 21:01:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_cart.php on line 12
+[12-Sep-2020 21:01:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_branch.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_branch.php on line 12
+[12-Sep-2020 21:01:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_order.php on line 12
+[12-Sep-2020 21:01:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/States_option.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/States_option.php on line 12
+[12-Sep-2020 21:01:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Credits_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Credits_order.php on line 12
+[12-Sep-2020 21:01:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php on line 12
+[12-Sep-2020 21:01:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Withdraw_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Withdraw_order.php on line 12
+[12-Sep-2020 21:01:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/New_data_counter.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/New_data_counter.php on line 12
+[12-Sep-2020 21:01:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver_history.php on line 12
+[12-Sep-2020 21:01:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Prod_price_local.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Prod_price_local.php on line 12
+[12-Sep-2020 21:01:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php on line 12
+[12-Sep-2020 21:01:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_favourite.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_favourite.php on line 12
+[12-Sep-2020 21:01:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php on line 12
+[12-Sep-2020 21:01:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php on line 12
+[12-Sep-2020 21:01:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php on line 12
+[12-Sep-2020 21:01:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php on line 11
+[12-Sep-2020 23:14:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd.php on line 12
+[12-Sep-2020 23:15:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd.php on line 12
+[12-Sep-2020 23:15:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd.php on line 12
+[12-Sep-2020 23:15:12 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Fee.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Fee.php on line 12
+[12-Sep-2020 23:15:19 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Fee.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Fee.php on line 12
+[12-Sep-2020 23:15:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Fee.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Fee.php on line 12
+[12-Sep-2020 23:15:44 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Rate.php on line 12
+[12-Sep-2020 23:15:46 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User.php on line 12
+[12-Sep-2020 23:15:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Rate.php on line 12
+[12-Sep-2020 23:15:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User.php on line 12
+[12-Sep-2020 23:16:12 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Rate.php on line 12
+[12-Sep-2020 23:16:16 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer.php on line 12
+[12-Sep-2020 23:16:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User.php on line 12
+[12-Sep-2020 23:16:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer.php on line 12
+[12-Sep-2020 23:16:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Event.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Event.php on line 12
+[12-Sep-2020 23:16:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Event.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Event.php on line 12
+[12-Sep-2020 23:16:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer.php on line 12
+[12-Sep-2020 23:16:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Admin.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Admin.php on line 12
+[12-Sep-2020 23:16:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Admin.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Admin.php on line 12
+[12-Sep-2020 23:16:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Event.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Event.php on line 12
+[12-Sep-2020 23:16:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Admin.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Admin.php on line 12
+[12-Sep-2020 23:16:54 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Store.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Store.php on line 12
+[12-Sep-2020 23:16:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Store.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Store.php on line 12
+[12-Sep-2020 23:17:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Store.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Store.php on line 12
+[12-Sep-2020 23:17:45 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Report.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Report.php on line 12
+[12-Sep-2020 23:18:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Report.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Report.php on line 12
+[12-Sep-2020 23:18:09 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Report.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Report.php on line 12
+[12-Sep-2020 23:18:12 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php on line 12
+[12-Sep-2020 23:18:14 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php on line 12
+[12-Sep-2020 23:18:21 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_warehouse.php on line 12
+[12-Sep-2020 23:18:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver.php on line 12
+[12-Sep-2020 23:18:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver.php on line 12
+[12-Sep-2020 23:18:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver.php on line 12
+[12-Sep-2020 23:19:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t1.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t1.php on line 9
+[12-Sep-2020 23:19:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t1.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t1.php on line 9
+[12-Sep-2020 23:19:21 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t1.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t1.php on line 9
+[12-Sep-2020 23:19:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Article.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Article.php on line 12
+[12-Sep-2020 23:19:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Article.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Article.php on line 12
+[12-Sep-2020 23:19:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Article.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Article.php on line 12
+[12-Sep-2020 23:19:55 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t2.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t2.php on line 9
+[12-Sep-2020 23:19:55 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t2.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t2.php on line 9
+[12-Sep-2020 23:20:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Auth\User' not found in /home/ihodhod/public_html/VUE/app/Zone_t2.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Zone_t2.php on line 9
+[12-Sep-2020 23:20:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver.php on line 12
+[12-Sep-2020 23:22:25 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/prod_price.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/prod_price.php on line 12
+[12-Sep-2020 23:22:31 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver.php on line 12
+[12-Sep-2020 23:22:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/prod_price.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/prod_price.php on line 12
+[12-Sep-2020 23:22:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver.php on line 12
+[12-Sep-2020 23:23:02 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/prod_price.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/prod_price.php on line 12
+[12-Sep-2020 23:23:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User_order.php on line 12
+[12-Sep-2020 23:23:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer_rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer_rate.php on line 12
+[12-Sep-2020 23:23:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User_order.php on line 12
+[12-Sep-2020 23:23:16 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer_rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer_rate.php on line 12
+[12-Sep-2020 23:23:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/User_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/User_order.php on line 12
+[12-Sep-2020 23:23:24 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offer_rate.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offer_rate.php on line 12
+[12-Sep-2020 23:23:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_group.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_group.php on line 12
+[12-Sep-2020 23:23:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_handeler.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_handeler.php on line 12
+[12-Sep-2020 23:23:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_group.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_group.php on line 12
+[12-Sep-2020 23:24:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_handeler.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_handeler.php on line 12
+[12-Sep-2020 23:24:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_group.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_group.php on line 12
+[12-Sep-2020 23:24:38 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_handeler.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_handeler.php on line 12
+[12-Sep-2020 23:24:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_black_list.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_black_list.php on line 12
+[12-Sep-2020 23:24:41 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Notification.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Notification.php on line 12
+[12-Sep-2020 23:24:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_black_list.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_black_list.php on line 12
+[12-Sep-2020 23:24:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Notification.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Notification.php on line 12
+[12-Sep-2020 23:24:46 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Orders_black_list.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Orders_black_list.php on line 12
+[12-Sep-2020 23:24:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Notification.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Notification.php on line 12
+[12-Sep-2020 23:24:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_order.php on line 12
+[12-Sep-2020 23:24:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_cart.php on line 12
+[12-Sep-2020 23:25:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_order.php on line 12
+[12-Sep-2020 23:25:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_cart.php on line 12
+[12-Sep-2020 23:25:16 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_order.php on line 12
+[12-Sep-2020 23:25:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_cart.php on line 12
+[12-Sep-2020 23:25:19 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_branch.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_branch.php on line 12
+[12-Sep-2020 23:25:19 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/States_option.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/States_option.php on line 12
+[12-Sep-2020 23:25:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/States_option.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/States_option.php on line 12
+[12-Sep-2020 23:25:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_branch.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_branch.php on line 12
+[12-Sep-2020 23:25:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/States_option.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/States_option.php on line 12
+[12-Sep-2020 23:25:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_order.php on line 12
+[12-Sep-2020 23:26:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_branch.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_branch.php on line 12
+[12-Sep-2020 23:26:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_order.php on line 12
+[12-Sep-2020 23:26:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Credits_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Credits_order.php on line 12
+[12-Sep-2020 23:26:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Credits_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Credits_order.php on line 12
+[12-Sep-2020 23:26:27 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Forward_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Forward_order.php on line 12
+[12-Sep-2020 23:26:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Withdraw_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Withdraw_order.php on line 12
+[12-Sep-2020 23:26:32 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Credits_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Credits_order.php on line 12
+[12-Sep-2020 23:26:36 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Withdraw_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Withdraw_order.php on line 12
+[12-Sep-2020 23:26:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php on line 12
+[12-Sep-2020 23:26:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Withdraw_order.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Withdraw_order.php on line 12
+[12-Sep-2020 23:26:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php on line 12
+[12-Sep-2020 23:26:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/New_data_counter.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/New_data_counter.php on line 12
+[12-Sep-2020 23:27:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Deliver_car_doc.php on line 12
+[12-Sep-2020 23:27:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/New_data_counter.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/New_data_counter.php on line 12
+[12-Sep-2020 23:27:40 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Prod_price_local.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Prod_price_local.php on line 12
+[12-Sep-2020 23:27:43 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Prod_price_local.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Prod_price_local.php on line 12
+[12-Sep-2020 23:27:46 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/New_data_counter.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/New_data_counter.php on line 12
+[12-Sep-2020 23:27:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver_history.php on line 12
+[12-Sep-2020 23:27:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Prod_price_local.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Prod_price_local.php on line 12
+[12-Sep-2020 23:27:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver_history.php on line 12
+[12-Sep-2020 23:27:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_favourite.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_favourite.php on line 12
+[12-Sep-2020 23:28:01 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_favourite.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_favourite.php on line 12
+[12-Sep-2020 23:28:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiver_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiver_history.php on line 12
+[12-Sep-2020 23:28:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php on line 12
+[12-Sep-2020 23:28:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_favourite.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_favourite.php on line 12
+[12-Sep-2020 23:28:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php on line 12
+[12-Sep-2020 23:28:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php on line 12
+[12-Sep-2020 23:28:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php on line 12
+[12-Sep-2020 23:28:26 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Receiving_deliver.php on line 12
+[12-Sep-2020 23:28:29 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Offers_orders_cart.php on line 12
+[12-Sep-2020 23:28:30 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php on line 12
+[12-Sep-2020 23:28:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php on line 12
+[12-Sep-2020 23:28:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php on line 12
+[12-Sep-2020 23:28:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php on line 12
+[12-Sep-2020 23:29:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_withdraw_history.php on line 12
+[12-Sep-2020 23:29:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Gd_credit_transfer_history.php on line 12
+[12-Sep-2020 23:29:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php on line 11
+[12-Sep-2020 23:29:16 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php on line 11
+[12-Sep-2020 23:29:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Order_status_changes_history.php on line 11

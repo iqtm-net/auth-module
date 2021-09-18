@@ -1,0 +1,8 @@
+[12-Sep-2020 21:08:57 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/ihodhod/public_html/VUE/app/Http/Controllers/api/Authintication/UserAuth.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Http/Controllers/api/Authintication/UserAuth.php on line 15
+[12-Sep-2020 21:08:59 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home/ihodhod/public_html/VUE/app/Http/Controllers/api/Authintication/MainAuth.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Http/Controllers/api/Authintication/MainAuth.php on line 19

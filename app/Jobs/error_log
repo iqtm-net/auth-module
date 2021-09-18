@@ -1,0 +1,32 @@
+[12-Sep-2020 21:01:43 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Jobs\Job' not found in /home/ihodhod/public_html/VUE/app/Jobs/ExampleJob.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Jobs/ExampleJob.php on line 5
+[12-Sep-2020 21:01:43 UTC] PHP Fatal error:  Uncaught Error: Interface 'Illuminate\Contracts\Queue\ShouldQueue' not found in /home/ihodhod/public_html/VUE/app/Jobs/Job.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Jobs/Job.php on line 10
+[12-Sep-2020 23:48:08 UTC] PHP Fatal error:  Uncaught Error: Interface 'Illuminate\Contracts\Queue\ShouldQueue' not found in /home/ihodhod/public_html/VUE/app/Jobs/Job.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Jobs/Job.php on line 10
+[12-Sep-2020 23:48:15 UTC] PHP Fatal error:  Uncaught Error: Interface 'Illuminate\Contracts\Queue\ShouldQueue' not found in /home/ihodhod/public_html/VUE/app/Jobs/Job.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Jobs/Job.php on line 10
+[12-Sep-2020 23:48:21 UTC] PHP Fatal error:  Uncaught Error: Interface 'Illuminate\Contracts\Queue\ShouldQueue' not found in /home/ihodhod/public_html/VUE/app/Jobs/Job.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Jobs/Job.php on line 10
+[12-Sep-2020 23:48:26 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Jobs\Job' not found in /home/ihodhod/public_html/VUE/app/Jobs/ExampleJob.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Jobs/ExampleJob.php on line 5
+[12-Sep-2020 23:48:29 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Jobs\Job' not found in /home/ihodhod/public_html/VUE/app/Jobs/ExampleJob.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Jobs/ExampleJob.php on line 5
+[12-Sep-2020 23:48:43 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Jobs\Job' not found in /home/ihodhod/public_html/VUE/app/Jobs/ExampleJob.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/ihodhod/public_html/VUE/app/Jobs/ExampleJob.php on line 5

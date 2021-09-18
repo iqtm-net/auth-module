@@ -2,7 +2,8 @@
 
     <div class="uk-margin">
 
-        <div v-if="$A_Role == 'admins'" class="uk-grid-small uk-flex-middle" uk-grid>
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+
             <div class="uk-width-auto">
                 <i class="fas fa-user" style="font-size:2rem;color: #32d296"></i>
             </div>
@@ -32,6 +33,7 @@
                     <span class="fas fa-pen"></span> 
                 </button>
             </div>
+
         </div>
 
         <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
@@ -171,11 +173,9 @@
                             }
                         })
                         .catch(res => {
-                            console.log(res.response);
                             this.$toasted.show("Error 500", { type : 'error', theme: "bubble",  position: "bottom-right", duration : 2000 });
                         });
                 }, 
-
         }, 
 
         computed:{

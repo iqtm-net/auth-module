@@ -11,7 +11,6 @@
 |
 */
 
-
 //PUBLIC
 $router->group(['prefix' => 'api', 'middleware' => ['throttle:180,60']], function($router)
 {   

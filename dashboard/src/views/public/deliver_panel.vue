@@ -56,11 +56,11 @@
                                         <th scope="col">{{status_arrays(scaned_order_details.status)}}</th>
                                         <th scope="col">الحالة</th>
                                         </tr>
-                                        <tr v-if="scaned_order_details.status == 'pending'">
+                                        <tr v-if="['pending', 'ReturnedToDeliver', 'ReturnedToClient'].includes(scaned_order_details.status)">
                                             <th scope="col" colspan="2">تغيير حالة الطلب</th>
                                         </tr>
                                     </thead>
-                                    <tbody v-if="scaned_order_details.status == 'pending'">
+                                    <tbody v-if="['pending', 'ReturnedToDeliver', 'ReturnedToClient'].includes(scaned_order_details.status)">
 
                                         <tr>
                                         <th scope="row" >واصل</th>

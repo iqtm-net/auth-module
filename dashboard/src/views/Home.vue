@@ -262,14 +262,6 @@
                 </div>
 
                 <hr class="uk-divider-icon">
-                <!-- <view-statistic :FilterOptions="{
-                Account_Id:'All', 
-                Account_Role_Number:'All', 
-                dateFrom:'All', 
-                dateTo:'All',  
-                FromState:'All', 
-                ToState:'All',  
-                }"></view-statistic>  -->
                 <hr class="uk-divider-icon">
                 
 

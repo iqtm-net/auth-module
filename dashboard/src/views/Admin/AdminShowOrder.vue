@@ -801,7 +801,6 @@
                 this.dateFrom = 'All';
                 this.dateRange.startDate = '';
                 this.dateRange.endDate = '';
-                this.dateFrom = 'All';
                 this.$refs.clickCancel.clickCancel()
                 this.fetchArticles();
             },

@@ -296,7 +296,7 @@
                 })
                 .catch(res => {
                     JSON.stringify(res);
-                    this.$router.push({ path: '/404' })
+                    // this.$router.push({ path: '/404' })
                 });
 
                 if(this.$route.params.Order_id !== undefined){
@@ -306,7 +306,7 @@
                     })
                     .catch(res => {
                         JSON.stringify(res);
-                        this.$router.push({ name: '404' })
+                        // this.$router.push({ name: '404' })
                     });
                 }
             },
@@ -320,17 +320,20 @@
                 this.axios.get(process.env.VUE_APP_URL+`/api/get_branche_items_pag/${store_name[0]}/All?page=${this.items_pag}`)
                 .then(res => {   
                     
-                    var v = this;
-                    let storeitems = new Map(res.data.data);
-                    storeitems.forEach(function(value, key){
+                    // if(){
+                        var v = this;
+                        let storeitems = new Map(res.data.data);
+                        storeitems.forEach(function(value, key){
                         v.Store_Items.push([ key , value ]); 
-                    });
-                    this.items_res = true;
-                    this.items_res_length = res.data.data.length;
+                        });
+                        this.items_res = true;
+                        this.items_res_length = res.data.data.length;
+                    // }
+                    
                 })
                 .catch(res => {
                     JSON.stringify(res);
-                    this.$router.push({ path: '/404' })
+                    // this.$router.push({ path: '/404' })
                 }); 
             },
 
@@ -344,7 +347,6 @@
                     var content = this.$refs.scroll_d;
                     
                     if ((window.innerHeight + document.documentElement.scrollTop) > content.offsetHeight+40 && this.items_res_length > 0) {
-                        // console.log('bla3mbla');
                         this.get_branche_items_pag();
                     }
                 }

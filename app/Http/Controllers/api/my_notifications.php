@@ -10,6 +10,7 @@
     use App\Http\Controllers\Controller;
     use Tymon\JWTAuth\JWTAuth;
     use Illuminate\Http\Request;
+    use App\User_order;
 
     use Config;
 
@@ -18,12 +19,17 @@
 
         public function My_Notifications()
         {
-            $get = Notification::where('MemberPhoneNumber', user()->phone_number)->orWhere('MemberPhoneNumber', 0)->get();
+            $get = Notification::where('MemberPhoneNumber', user()->phone_number)->orWhere('MemberPhoneNumber', 0)
+            ->orderBy('id', 'DESC')
+            ->get()
+            ->map(function ($data) {
+                $data['full_name'] = ($data->order_id !== null) ? User_order::where('track_code', $data->order_id)->first()->sender_full_name : null;
+                return $data;
+            });
             
             return ResultNoSB($get, 200);
         }
 
-        //Admin & Gd Notification system
         public function events()
         {   
 

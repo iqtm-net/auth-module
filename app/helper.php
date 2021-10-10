@@ -492,21 +492,27 @@ function GetTBCol($table){
 
 }
 
-function DeliverFee($from, $to, $user_role = null){
-
-    $user_role = (is_null($user_role)) ? user_role() : $user_role;
+function DeliverFee($from, $to, $Role, $CustomeFees){
 
     //if shipping is local
-    if ($from == $to) {
+    if (ar_english_country($from) == ar_english_country($to)) {
+
+        ($CustomeFees->local_deliver_fee) ? $CustomeFees->local_deliver_fee : "noo" ;
+
         $res = Prod_price_local::first();
         $res->type = "local";
+        $res->Deliver_Fee = ($CustomeFees->local_deliver_fee) ? $CustomeFees->local_deliver_fee : $res->Deliver_Fee;
+
         return $res;
     }
 
     //if shipping is global
     else{
-        $res = prod_price::where('type', $user_role)->first();
+        
+        $res = prod_price::where('type', $Role)->first();
         $res->type = "global";
+        $res->Deliver_Fee = ($CustomeFees->global_deliver_fee) ? $CustomeFees->global_deliver_fee : $res->Deliver_Fee;
+
         return $res;
     }
 
@@ -540,7 +546,7 @@ function base64images($request, $column, $path){
 
 }
 
-function Notification($tkns,$title,$body,$phone_number){
+function Notification($tkns,$title,$body,$phone_number, $order_id = null, $Record = true){
 
     $user_device_key = $tkns;
     $msg = array(
@@ -578,12 +584,15 @@ function Notification($tkns,$title,$body,$phone_number){
     $op = curl_exec($ch);
     curl_close($ch);
 
-    $post = new Notification;
-    $post->MSG = $body;
-    $post->title = $title;
-    $post->MemberPhoneNumber = $phone_number;
-    $post->save();
-
+    if($Record){
+        $post = new Notification;
+        $post->MSG = $body;
+        $post->title = $title;
+        $post->MemberPhoneNumber = $phone_number;
+        $post->order_id = $order_id;
+        $post->save();
+    }
+    
     return $op;
     
 }
@@ -591,4 +600,8 @@ function Notification($tkns,$title,$body,$phone_number){
 
 function percentage($Value,$Total){
     return ($Total == 0 || $Value == 0) ? 0 : round(100*($Value/$Total));
+}
+
+function arr_multi_sum($Arr, $value){
+    return array_sum(array_column($Arr, $value));
 }

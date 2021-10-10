@@ -19,7 +19,7 @@ class Notification extends Model implements JWTSubject, AuthenticatableContract,
          * @var array
          */
         protected $fillable = [
-            'MSG', 'title', 'MemberPhoneNumber',
+            'MSG', 'title', 'MemberPhoneNumber', 'order_id',
         ];
 
         /**

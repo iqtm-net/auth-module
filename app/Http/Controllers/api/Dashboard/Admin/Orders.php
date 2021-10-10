@@ -152,7 +152,8 @@
                         [$GetPoster->firebase_token],
                         " تم استلام البريد "."(".$update->product_name.")",
                         " سوف يباشر هدهد بعملة ايصال بريدك  "."(".$update->product_name.")"." الى المستلم "."(".$update->receiver_full_name.")",
-                        $GetPoster->phone_number
+                        $GetPoster->phone_number,
+                        $update->track_code
                     );
                 }
 
@@ -177,7 +178,8 @@
                         [$GetPoster->firebase_token], 
                         " تم تحديث حالة الطلب للبريد ".$update->track_code,
                         " تم ايصال بريد "."(".$update->product_name.")"." يمكنك تقييم عملية التوصيل من خلال قائمة البريد المكتمل. ",
-                        $GetPoster->phone_number
+                        $GetPoster->phone_number,
+                        $update->track_code
                     );
 
                 }
@@ -194,7 +196,8 @@
                         [$GetPoster->firebase_token], 
                         'حالة الطلب',
                         " لم نستطع ايصال بريد "."(".$update->receiver_full_name.")"." بسبب "."(".$update->case_details.")",
-                        $GetPoster->phone_number
+                        $GetPoster->phone_number,
+                        $update->track_code
                     );
                 }
                 
@@ -231,7 +234,7 @@
             ]);
             
             $path1 = $request->file('file');
-            //->store('temp'); 
+
             $path=storage_path('app').'/'.$path1;
         
             Excel::import(new Change_orders_status(), $path1);
@@ -243,64 +246,123 @@
         public function Statistic($role, $id, $dateFrom, $dateto, $FromState, $ToState)
         {   
             
-            $AllOrders = User_order::all()->count();
-            $Waiting = 0;
-            $DelayGlobal = 0;
-            $DelayLocal = 0;
-            $Pending = 0;
-            $ReturnedToDeliver = 0;
-            $ReturnedToClient = 0;
-            $DeliveredRepayed = 0; 
-            $DeliveredUnRepayed = 0; 
-            
             $Orders = User_order::
+            // select('id','status','created_at')
             when($role !== 'All', function ($q) use($role,$id) { return $q->where('user_id', $id)->where('account_type',$role); })
-            
-            ->when(user()->id == 24, function ($q) use($role,$id) {  return $q->where('created_at', '>=', "2021-09-01T9:14:14.865282Z"); })
-            
             ->when($dateFrom !== 'All' && $dateto !== 'All', function ($q) use($dateFrom, $dateto) {return $q->whereBetween('created_at', [$dateFrom, $dateto]); })
             ->when($ToState !== 'All', function ($q) use($ToState) { return $q->Where('location_to_state', 'LIKE','%'.$ToState.'%'); })
             ->when($FromState !== 'All', function ($q) use($FromState) { return $q->Where('location_from_state', 'LIKE','%'.$FromState.'%'); }) 
             ->where('in_cart', 0)
             ->get()
-            ->map(function ($Order) use (&$Waiting, &$DelayGlobal, &$DelayLocal, &$Pending, &$ReturnedToDeliver, &$ReturnedToClient, &$DeliveredRepayed, &$DeliveredUnRepayed){
-
+            ->map(function ($Order) use (&$Waiting, &$Waiting_Total_Df, &$DelayGlobal, &$DelayLocal, &$Pending, &$ReturnedToDeliver, &$ReturnedToClient, &$DeliveredRepayed, &$DeliveredUnRepayed){
                 $CheckRepayment = Member_stack::where('order_id', $Order->id)->where('popped', 1)->first();
-
-                if($Order->status == "waiting")  { $Waiting++; }
-                if($Order->status == "waiting" && $Order->location_from_state == $Order->location_to_state  && $Order->created_at <= Carbon::now()->subHours(24)){ $DelayLocal++; }
-                if($Order->status == "waiting" && $Order->location_from_state !== $Order->location_to_state && $Order->created_at <= Carbon::now()->subHours(72)){ $DelayGlobal++; }
-                if($Order->status == "pending") { $Pending++; }
-                if($Order->status == "ReturnedToDeliver") { $ReturnedToDeliver++; }
-                if($Order->status == "ReturnedToClient") { $ReturnedToClient++; }
-                if($Order->status == "delivered" && $CheckRepayment) { $DeliveredRepayed++; }
-                if($Order->status == "delivered" && !$CheckRepayment) { $DeliveredUnRepayed++; }
-
+                $Order['CheckRepayment'] = ($CheckRepayment) ? true : false;
                 return $Order;
-            }); 
+            })
+            ->toArray();
 
-            $TotalOrders = $Orders->count();
+            $Waiting = array_values(Arr::where($Orders, function ($value, $key) {
+                return $value['status'] == 'waiting';
+            }));
+
+            $DelayGlobal = array_values(Arr::where($Orders, function ($value, $key) {
+                return $value['status'] == "waiting" && $value['location_from_state'] !== $value['location_to_state'] && $value['created_at'] <= Carbon::now()->subHours(72);
+            }));
+
+            $DelayLocal = array_values(Arr::where($Orders, function ($value, $key) {
+                return $value['status'] == "waiting" && $value['location_from_state'] == $value['location_to_state'] && $value['created_at'] <= Carbon::now()->subHours(24);
+            }));
+
+            $Pending = array_values(Arr::where($Orders, function ($value, $key) {
+                return $value['status'] == 'pending';
+            }));
+
+            $ReturnedToDeliver = array_values(Arr::where($Orders, function ($value, $key) {
+                return $value['status'] == 'ReturnedToDeliver';
+            }));
+
+            $ReturnedToClient = array_values(Arr::where($Orders, function ($value, $key) {
+                return $value['status'] == 'ReturnedToClient';
+            }));
+
+            $DeliveredRepayed = array_values(Arr::where($Orders, function ($value, $key) {
+                return $value['status'] == 'delivered' && $value['CheckRepayment'];
+            }));
+            
+            $DeliveredUnRepayed = array_values(Arr::where($Orders, function ($value, $key) {
+                return $value['status'] == 'delivered' && !$value['CheckRepayment'];
+            }));
+
+            // return array_sum(array_column($DelayLocal, 'Deliver_Fee')); 
 
             return response()->json([ 
-                [ 'name' => 'Waiting', 'value' => $Waiting ],
-                [ 'name' => 'DelayGlobal', 'value' => $DelayGlobal ],
-                [ 'name' => 'DelayLocal', 'value' => $DelayLocal ],
-                [ 'name' => 'Pending', 'value' => $Pending ],
-                [ 'name' => 'Returned to deliver', 'value' => $ReturnedToDeliver ],
-                [ 'name' => 'Returned to client', 'value' => $ReturnedToClient ],
-                [ 'name' => 'Delivered Withdrawn', 'value' => $DeliveredRepayed ],
-                [ 'name' => 'Delivered Unwithdrawn', 'value' => $DeliveredUnRepayed ]
+                [ 
+                    'name' => 'Total', 
+                    'value' => count($Orders), 
+                    "total_df" => arr_multi_sum($Orders, 'Deliver_Fee'), 
+                    "total_items" => arr_multi_sum($Orders, 'recieved_price'), 
+                    "total_inv" => arr_multi_sum($Orders, 'Deliver_Fee') + arr_multi_sum($Orders, 'recieved_price') 
+                ],
+                [
+                    [ 
+                        'name' => 'Waiting', 
+                        'value' => count($Waiting), 
+                        "total_df" => arr_multi_sum($Waiting, 'Deliver_Fee'), 
+                        "total_items" => arr_multi_sum($Waiting, 'recieved_price'), 
+                        "total_inv" => arr_multi_sum($Waiting, 'Deliver_Fee') + arr_multi_sum($Waiting, 'recieved_price') 
+                    ],
+                    [ 
+                        'name' => 'DelayGlobal', 
+                        'value' => count($DelayGlobal), 
+                        "total_df" => arr_multi_sum($DelayGlobal, 'Deliver_Fee'), 
+                        "total_items" => arr_multi_sum($DelayGlobal, 'recieved_price'),  
+                        "total_inv" => arr_multi_sum($DelayGlobal, 'Deliver_Fee') + arr_multi_sum($DelayGlobal, 'recieved_price') 
+                    ],
+                    [ 
+                        'name' => 'DelayLocal', 
+                        'value' => count($DelayLocal), 
+                        "total_df" => arr_multi_sum($DelayLocal, 'Deliver_Fee'),  
+                        "total_items" => arr_multi_sum($DelayLocal, 'recieved_price'), 
+                        "total_inv" => arr_multi_sum($DelayLocal, 'Deliver_Fee') + arr_multi_sum($DelayLocal, 'recieved_price') 
+                    ],
+                    [ 
+                        'name' => 'Pending', 
+                        'value' => count($Pending), 
+                        "total_df" => arr_multi_sum($Pending, 'Deliver_Fee'),  
+                        "total_items" => arr_multi_sum($Pending, 'recieved_price'), 
+                        "total_inv" => arr_multi_sum($Pending, 'Deliver_Fee') + arr_multi_sum($Pending, 'recieved_price') 
+                    ],
+                    [ 
+                        'name' => 'Returned to deliver', 
+                        'value' => count($ReturnedToDeliver), 
+                        "total_df" => arr_multi_sum($ReturnedToDeliver, 'Deliver_Fee'),  
+                        "total_items" => arr_multi_sum($ReturnedToDeliver, 'recieved_price'), 
+                        "total_inv" => arr_multi_sum($ReturnedToDeliver, 'Deliver_Fee') + arr_multi_sum($ReturnedToDeliver, 'recieved_price') 
+                    ],
+                    [ 
+                        'name' => 'Returned to client', 
+                        'value' => count($ReturnedToClient), 
+                        "total_df" => arr_multi_sum($ReturnedToClient, 'Deliver_Fee'),  
+                        "total_items" => arr_multi_sum($ReturnedToClient, 'recieved_price'), 
+                        "total_inv" => arr_multi_sum($ReturnedToClient, 'Deliver_Fee') + arr_multi_sum($ReturnedToClient, 'recieved_price') 
+                    ],
+                    [ 
+                        'name' => 'Delivered Withdrawn', 
+                        'value' => count($DeliveredRepayed), 
+                        "total_df" => arr_multi_sum($DeliveredRepayed, 'Deliver_Fee'),  
+                        "total_items" => arr_multi_sum($DeliveredRepayed, 'recieved_price'), 
+                        "total_inv" => arr_multi_sum($DeliveredRepayed, 'Deliver_Fee') + arr_multi_sum($DeliveredRepayed, 'recieved_price') 
+                    ],
+                    [ 
+                        'name' => 'Delivered Unwithdrawn', 
+                        'value' => count($DeliveredUnRepayed), 
+                        "total_df" => arr_multi_sum($DeliveredUnRepayed, 'Deliver_Fee'),  
+                        "total_items" => arr_multi_sum($DeliveredUnRepayed, 'recieved_price'), 
+                        "total_inv" => arr_multi_sum($DeliveredUnRepayed, 'Deliver_Fee') + arr_multi_sum($DeliveredUnRepayed, 'recieved_price') 
+                    ],
+                ]
             ], 200);
 
-            // "Waiting" => [$Waiting, percentage($Waiting,$TotalOrders)],
-            // "DelayGlobal" => [$DelayGlobal, percentage($DelayGlobal,$TotalOrders)],
-            // "DelayLocal" => [$DelayLocal, percentage($DelayLocal,$TotalOrders)],
-            // "Pending" => [$Pending, percentage($Pending,$TotalOrders)],
-            // "ReturnedToDeliver" => [$ReturnedToDeliver, percentage($ReturnedToDeliver,$TotalOrders)],
-            // "ReturnedToClient" => [$ReturnedToClient, percentage($ReturnedToClient,$TotalOrders)],
-            // "DeliveredRepayed" => [$DeliveredRepayed, percentage($DeliveredRepayed,$TotalOrders)],
-            // "DeliveredUnRepayed" => [$DeliveredUnRepayed, percentage($DeliveredUnRepayed,$TotalOrders)],
-            
         }
 
         public function DownloadStat($id, $type, $status, $DateFrom, $DateTo)

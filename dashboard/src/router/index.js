@@ -33,6 +33,5 @@ export const routes = [
 { path: '/Notifications', component: () => import('../views/Admin/Notifications.vue')  , meta: { requiresAuth: true, Allow: ['admins','receivers']}},
 { path: '/Main', component: () => import('../views/Admin/Main.vue')  , meta: { requiresAuth: true, Allow: ['admins','receivers']}},
 { path: '/Action_History', component: () => import('../views/Admin/Action_History.vue')  , meta: { requiresAuth: true, Allow: ['admins','receivers']}},
-{ path: '/test', component: () => import('../views/Admin/test.vue')  , meta: { requiresAuth: true, Allow: ['admins','receivers']}},
 
 ];

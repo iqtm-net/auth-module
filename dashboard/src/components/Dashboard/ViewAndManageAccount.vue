@@ -45,21 +45,38 @@
                     </div>
                 </div>
             </div>
+
             <div v-if="Account_Role == 'stores' || Account_Role == 'users'">
                 <div class="uk-card customUkCard1" > <input class="dbld form-control"  :disabled="disabled == 1" type="text"  v-model="Account.balance"> </div>
             </div>
              
             <div v-if="Account_Role == 'stores' || Account_Role == 'users'">
-                <div class="uk-card customUkCard" >Deliver Fee
+                <div class="uk-card customUkCard" >Global Deliver Fee
                     <div v-if="val_errors" style="color:red">
-                        <font v-for="error in val_errors.Deliver_Fee" :key="error.id"> ({{error}}) </font>
+                        <font v-for="error in val_errors.global_deliver_fee" :key="error.id"> ({{error}}) </font>
                     </div>
                 </div>
             </div>
+            
             <div v-if="Account_Role == 'stores' || Account_Role == 'users'">
                 <div class="uk-card customUkCard1"> 
-                    <div v-if="Account.Deliver_Fee == null && disabled == 1"> ----- </div>
-                    <input v-else class="dbld form-control"  :disabled="disabled == 1" type="text"  v-model="Account.Deliver_Fee"> 
+                    <div v-if="Account.global_deliver_fee == null && disabled == 1"> ----- </div>
+                    <input v-else class="dbld form-control"  :disabled="disabled == 1" type="text"  v-model="Account.global_deliver_fee"> 
+                </div>
+            </div>
+
+            <div v-if="Account_Role == 'stores' || Account_Role == 'users'">
+                <div class="uk-card customUkCard" >Local Deliver Fee
+                    <div v-if="val_errors" style="color:red">
+                        <font v-for="error in val_errors.local_deliver_fee" :key="error.id"> ({{error}}) </font>
+                    </div>
+                </div>
+            </div>
+            
+            <div v-if="Account_Role == 'stores' || Account_Role == 'users'">
+                <div class="uk-card customUkCard1"> 
+                    <div v-if="Account.local_deliver_fee == null && disabled == 1"> ----- </div>
+                    <input v-else class="dbld form-control"  :disabled="disabled == 1" type="text"  v-model="Account.local_deliver_fee"> 
                 </div>
             </div>
 

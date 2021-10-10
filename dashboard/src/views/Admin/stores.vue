@@ -1,6 +1,7 @@
 <template>
 
     <div class="uk-margin">
+        
         <nav style="margin: 20px 0px; background:none;" class="uk-navbar-container" uk-navbar>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav"> 
@@ -13,6 +14,7 @@
                 </ul>
             </div>
         </nav>
+
         <!-- /////////////////////////////////// LISTING ////////////////////////////////////  -->
         <vcl-table v-if="!isLoaded" :rows="9" :columns="5"></vcl-table>
 
@@ -71,7 +73,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- VIEW -->
         <div id="ViewAccount" uk-modal>

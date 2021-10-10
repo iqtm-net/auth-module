@@ -20,8 +20,8 @@
 
             <div class="uk-width-1-5@m">
                 <div class="position-relative">
-                    <!-- {{dateRange}} -->
-                    <date-range-picker 
+
+                    <date-range-picker
                         class="uk-width-1-1"
                         :opens="`right`"
                         :linkedCalendars="true"
@@ -29,11 +29,13 @@
                         v-model="dateRange" 
                         ref="clickCancel"
                     ></date-range-picker>
+
                     <span class="position-absolute top-0 translate-middle border border-light rounded-circle">
                         <button :disabled="!Anytime" @click.prevent="clickCancel()" id="buttonid2" class="uk-button uk-button-danger">
                             <i class="fas fa-window-close"></i>
                         </button>
                     </span>
+
                 </div>
             </div>
 

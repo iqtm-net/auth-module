@@ -50,7 +50,8 @@ class Change_orders_status implements ToModel, WithHeadingRow
                 [$GetPoster->firebase_token], 
                 " تم تحديث حالة الطلب للبريد ".$update->track_code,
                 " تم ايصال بريد "."(".$update->product_name.")"." يمكنك تقييم عملية التوصيل من خلال قائمة البريد المكتمل. ",
-                $GetPoster->phone_number
+                $GetPoster->phone_number,
+                $update->track_code
             );
 
         }
@@ -67,7 +68,8 @@ class Change_orders_status implements ToModel, WithHeadingRow
                 [$GetPoster->firebase_token], 
                 'حالة الطلب',
                 " لم نستطع ايصال بريد "."(".$update->receiver_full_name.")"." بسبب "."(".$update->case_details.")",
-                $GetPoster->phone_number
+                $GetPoster->phone_number,
+                $update->track_code
             );
         }
 
@@ -76,7 +78,8 @@ class Change_orders_status implements ToModel, WithHeadingRow
                 [$GetPoster->firebase_token], 
                 " تم استلام البريد "."(".$update->product_name.")",
                 " سوف يباشر هدهد بعملة ايصال بريدك  "."(".$update->product_name.")"." الى المستلم "."(".$update->receiver_full_name.")",
-                $GetPoster->phone_number
+                $GetPoster->phone_number,
+                $update->track_code
             );
         }
 

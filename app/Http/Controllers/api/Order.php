@@ -75,7 +75,7 @@ class Order extends Controller
     }
 
     public function GetPrice(Request $request)
-    {
+    {   
         $validator = Validator::make($request->all(), [
             'from' => 'required',
             'to' => 'required',
@@ -85,7 +85,9 @@ class Order extends Controller
             return Result(Null, 400, $validator->errors()); 
         }
 
-        return ResultNoSB(DeliverFee(ar_english_country($request->get('from')), ar_english_country($request->get('to'))), 200);
+        return ResultNoSB(
+            DeliverFee($request->get('from'), $request->get('to'), user_role(), user())
+        , 200);
     }
 
     public function Check_Receiver_by_phone(Request $request)
@@ -136,19 +138,15 @@ class Order extends Controller
             return ResultNoSB(Null, 403, "سعر البريد لا يجب ان يقل 1000 دينار عراقي اذا كان البريد هدية قم بادخال الرقم 0");
         }
 
-        //SHIPPING TYPE
-        $ShippingTypt = (user()->address_state == ar_english_country($request->get('location_to_state'))) ? "local" : "global";
-
         //FEES
-        $FEES = DeliverFee(user()->address_state, ar_english_country($request->get('location_to_state')));
+        $FEES = DeliverFee($request->get('location_from_state'), $request->get('location_to_state'), user_role(), user());
 
         $requestData['user_id'] = user()->id;
         $requestData['account_type'] = user_role_number();
         $requestData['track_code'] = Track_Code_Rand();
         $requestData['in_cart'] = 1;
         $requestData['App_Fee'] = $FEES->App_Fee;
-        $requestData['Deliver_Fee'] = $FEES->Deliver_Fee;
-        $requestData['shipping_type'] = $ShippingTypt;
+        $requestData['shipping_type'] = $FEES->type;
         $requestData['location_to_state'] = ar_english_country($request->get('location_to_state'));
         $requestData['sender_full_name'] = (!$request->has('sender_full_name')) ? user()->first_name." ".user()->last_name : $requestData['sender_full_name'];
         $requestData['sender_phone_number'] =  (!$request->has('sender_phone_number')) ? user()->phone_number : $requestData['sender_phone_number'];
@@ -167,7 +165,7 @@ class Order extends Controller
 
         $Order = User_order::create($requestData);
         
-        return Result(["response" => "seccuss", "Code" => $Order->track_code], 200);
+        return Result(["response" => "seccuss", "Code" => $Order->track_code,"DF"=>$FEES->Deliver_Fee], 200);
 
     }
     
@@ -640,8 +638,6 @@ class Order extends Controller
 
     }
 
-    
-
     public function update_item_in_warehouse(Request $request){
 
         $validator = Validator::make($request->all(), [
@@ -717,8 +713,6 @@ class Order extends Controller
         return Result(['Code' => 'https://'.user()->subdomain_name.'.ihodhod.com']);
     }
     
-    
-
     public function view_item($Order_id){
 
         $validator = Validator::make(
@@ -769,75 +763,6 @@ class Order extends Controller
         $AddComment->save();
 
         return Result("seccuss", 200);
-
-    }
-
-    public function submit_orders_By_Coustomer(Request $request){
-
-        $requestData = $request->all();
-        $requestData['insurance'] = filter_var($requestData['insurance'], FILTER_VALIDATE_BOOLEAN);
-
-        $validator = Validator::make($requestData, [
-            'store_id' => 'required|Numeric|exists:stores,id',
-            'product_name' => 'required|string|max:255',
-            'receiver_full_name' => 'required|string|max:255',
-            'payment_method' => 'required|string|max:255',
-            'reciever_phone_number' => 'required|Numeric',
-            'recieved_price' => 'required|Numeric',
-            'size' => 'required',
-            'color' => 'required',
-            'quantity' => 'required',
-            'location_to_state' => 'required|string|max:255', 
-            'location_to_region' => 'required|string|max:255',
-            'location_from_state' => 'string|max:255',
-            'location_from_region' => 'string|max:5000',
-            'location_to_country' => 'string|max:255',
-            'location_on_map_to' => 'string|max:255',
-            'location_on_map_from' => 'string|max:255',
-        ]);
-
-        if($validator->fails()){ return Result(Null, 400, $validator->errors()); }
-        
-        //Get Store 
-        $user = Store::find($request->get('store_id'));
-        
-        //Account_Type
-        $account_type = 3;
-
-        //SHIPPING TYPE
-        $ShippingTypt = ($user->address_state == ar_english_country($request->get('location_to_state'))) ? "local" : "global";
-
-        //FEES
-        $FEES = DeliverFee($user->address_state, ar_english_country($request->get('location_to_state')), 'stores');
-    
-        $requestData['user_id'] = $user->id;
-        $requestData['account_type'] = $account_type;
-        $requestData['track_code'] = Track_Code_Rand();
-        $requestData['in_cart'] = 1;
-        $requestData['sender_full_name'] = $user->first_name." ".$user->last_name;
-        $requestData['sender_phone_number'] = $user->phone_number;
-        $requestData['location_from_state'] = $user->address_state;
-        $requestData['location_from_region'] = $user->address_region;
-        $requestData['Deliver_Fee'] = $FEES->Deliver_Fee;
-        $requestData['App_Fee'] = $FEES->App_Fee;
-        $requestData['shipping_type'] = $ShippingTypt;
-        $requestData['location_from_country'] = "iraq";
-        $requestData['location_to_country'] = "iraq";
-        $requestData['location_to_state'] = ar_english_country($request->get('location_to_state')); 
-        $requestData['recieved_price'] = AR_TO_EN($request->get('recieved_price'));
-        $requestData['recieve_date'] = Carbon::now()->format('Y-m-d');
-        $requestData['status'] = "waiting";
-        $requestData['location_on_map_from'] = (!$request->has('location_on_map_from')) ? '33.3152,44.3661' : $request->get('location_on_map_from');
-        $requestData['location_on_map_to'] = (!$request->has('location_on_map_to')) ? '33.3152,44.3661' : $request->get('location_on_map_to');
-        $requestData['size'] = $request->get('size');
-        $requestData['color'] = $request->get('color');
-        $requestData['created_by_shared_link'] = 1;
-        $requestData['handeled_by'] = current_receiver();
-
-        $Order = User_order::create($requestData);
-
-        return Result(["response"=>"seccuss","Code"=>$Order->track_code], 200);
-
 
     }
     
@@ -956,9 +881,7 @@ class Order extends Controller
 // =================================================================== Discount ================================================
 
     public function get_discount_codes(){
-        
-        //  $get = Discount_code::find(8);
-        // return json_decode($get->customized_clients)[0][1]->id;
+
         $get = Discount_code::where('Expire', '>', Carbon::now())
         ->get()
         ->map(function ($code) {

@@ -210,17 +210,20 @@
 
         data(){
           return {
-              result_p : 'loading ......',
-              Deliver_Data: {},
-              scaned_order_details: {},
-              loading: false,
-              show: 'loading',
-              scanner_loaded: false,
-              returned_case: '',
-              post_name: '',
-              Order_id: '',
-              search_data: '',
-              post_price: '',    
+                result_p : 'loading ......',
+                Deliver_Data: {},
+                scaned_order_details: {},
+                loading: false,
+                show: 'loading',
+                scanner_loaded: false,
+                returned_case: '',
+                post_name: '',
+                Order_id: '',
+                search_data: '',
+                post_price: '',  
+                rules: [
+                    value => { return !this.val_errors || 'رمز الطلب غير صحيح'; }
+                ],  
           }
         },
 
@@ -231,7 +234,6 @@
         methods: {
 
             Searching(){
-                
                 if(this.Order_id !== ''){ 
                    this.onDecode(this.Order_id);
                 }
@@ -371,7 +373,7 @@
                 if(status == 'pending'){ return 'في الطريق'; }
                 if(status == 'delivered'){ return 'تم التسليم'; }
                 if(status == 'ReturnedToDeliver' && this.scaned_order_details.delayed){ return 'مؤجل'; }
-                if(status == 'ReturnedToDeliver' &&  !this.scaned_order_details.delayed){ return 'راجع الى هدهد'; }
+                if(status == 'ReturnedToClient' &&  !this.scaned_order_details.delayed){ return 'راجع'; }
             }
         },
 

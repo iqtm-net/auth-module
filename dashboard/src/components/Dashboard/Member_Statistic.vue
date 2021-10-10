@@ -1,22 +1,52 @@
 <template>
     <div>
         <vcl-table v-if="!isLoaded" :rows="3" :columns="3"></vcl-table>
-        <div v-else class="uk-child-width-1-2@m" uk-grid>
-            <div>
+        <div v-else class="" uk-grid>
+            <div class="uk-width-1-2@m">
+                <div class="uk-card uk-card-default uk-margin-top" align="center">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex" uk-grid>
+                            <div class="uk-width-auto uk-text-cario"> {{total_data.name}} </div>
+                            <div class="uk-width-expand uk-text-right uk-text-cario"> {{total_data.value}} </div>
+                        </div>
+                        <div class="uk-grid-small uk-flex" uk-grid>
+                            <div class="uk-width-auto uk-text-cario"> Deliver Fee </div>
+                            <div class="uk-width-expand uk-text-right uk-text-cario"> {{total_data.total_df}} IQD</div>
+                        </div>
+                        <div class="uk-grid-small uk-flex" uk-grid>
+                            <div class="uk-width-auto uk-text-cario"> Items </div>
+                            <div class="uk-width-expand uk-text-right uk-text-cario"> {{total_data.total_items}} IQD</div>
+                        </div>
+                        <div class="uk-grid-small uk-flex" uk-grid>
+                            <div class="uk-width-auto uk-text-cario"> Invoice </div>
+                            <div class="uk-width-expand uk-text-right uk-text-cario"> {{total_data.total_inv}} IQD </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-1-2@m">
                 <v-chart class="chart" :option="option" />
             </div>
-            <div>
-                <div class="uk-child-width-1-2@m" uk-grid>
+            <div class="uk-width-1-1@m">
+                <div class="uk-child-width-1-4@m" uk-grid>
                     <div v-for="stat in option.series[0].data" v-bind:key="stat.id"> 
-                        <div style="" class="uk-card uk-card-default" align="center">
-                            <div style="padding: 15px;" class="uk-card-header">
+                        <div class="uk-card uk-card-default" align="center">
+                            <div style="padding: 10px;" class="uk-card-header">
                                 <div class="uk-grid-small uk-flex" uk-grid>
-                                    <div class="uk-width-auto uk-text-cario">
-                                        {{stat.name}}
-                                    </div>
-                                    <div class="uk-width-expand uk-text-right uk-text-cario">
-                                        {{stat.value}}
-                                    </div>
+                                    <div class="uk-width-auto uk-text-cario"> {{stat.name}} </div>
+                                    <div class="uk-width-expand uk-text-right uk-text-cario"> {{stat.value}} </div>
+                                </div>
+                                <div class="uk-grid-small uk-flex" uk-grid>
+                                    <div class="uk-width-auto uk-text-cario"> Deliver Fee </div>
+                                    <div class="uk-width-expand uk-text-right uk-text-cario"> {{stat.total_df}} IQD</div>
+                                </div>
+                                <div class="uk-grid-small uk-flex" uk-grid>
+                                    <div class="uk-width-auto uk-text-cario"> Items </div>
+                                    <div class="uk-width-expand uk-text-right uk-text-cario"> {{stat.total_items}} IQD</div>
+                                </div>
+                                <div class="uk-grid-small uk-flex" uk-grid>
+                                    <div class="uk-width-auto uk-text-cario"> Invoice </div>
+                                    <div class="uk-width-expand uk-text-right uk-text-cario"> {{stat.total_inv}} IQD </div>
                                 </div>
                             </div>
                         </div>
@@ -28,8 +58,6 @@
 </template>
 
 <script>
-
-    
 
     import { use } from "echarts/core";
     import { CanvasRenderer } from "echarts/renderers";
@@ -129,6 +157,7 @@
                 },
                 miniload: false,
                 isLoaded: false,
+                total_data: [],
             };
         },
 
@@ -146,9 +175,9 @@
             Fetch(){
                 this.isLoaded = false;
                 this.axios.get(process.env.VUE_APP_URL+`/api/Admin/Statistic/${this.FilterOptions.Account_Role_Number}/${this.FilterOptions.Account_Id}/${this.FilterOptions.dateFrom}/${this.FilterOptions.dateTo}/${this.FilterOptions.FromState}/${this.FilterOptions.ToState}`)
-                // this.axios.get(process.env.VUE_APP_URL+`/api/Admin/Statistic/All/All/All/All/All/All`)
                 .then(res => {
-                    this.option.series[0].data = res.data;
+                    this.total_data = res.data[0];
+                    this.option.series[0].data = res.data[1];
                     this.isLoaded = true;
                 })
                 .catch(res => {

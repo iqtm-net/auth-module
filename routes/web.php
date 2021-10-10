@@ -41,8 +41,26 @@ $router->group(['prefix' => 'api', 'middleware' => ['throttle:180,60']], functio
     $router->get('DownloadStat/{id}/{type}/{status}/{DateFrom}/{DateTo}', 'api\Dashboard\Admin\Orders@DownloadStat');
     $router->post('Report', 'api\Reporting@Reporting1');
     $router->get('get_client_infos/{cliend_id}', 'api\Authintication\MainAuth@get_client_infos');
+    $router->get('client/statistic/{client_unique_code}/{download}', 'api\my_account@statistic');
+    $router->post('client/txt_service', 'api\Order@txt_service');
+    $router->get('client/search_orders/{keyword}', 'api\Order@search_orders');
 
-    //Store
+    //Store Web
+    $router->get('shopping/{subdomain_name}', 'api\Stores@main');
+    $router->get('shopping/{subdomain_name}/branches', 'api\Stores@branches');
+    $router->get('shopping/{subdomain_name}/items/{branch_id}', 'api\Stores@items');
+    $router->get('shopping/{subdomain_name}/view_item/{item_id}', 'api\Stores@view_item');
+    $router->post('shopping/customer/add_to_cart', 'api\Stores@add_to_cart');
+    $router->post('shopping/customer/remove_from_cart', 'api\Stores@remove_from_cart');
+    $router->get('shopping/customer/cart', 'api\Stores@cart');
+    $router->post('shopping/customer/submit_cart', 'api\Stores@submit_cart');
+    $router->post('shopping/customer/add_to_favourites', 'api\Stores@add_to_favourites');
+    $router->get('shopping/customer/favourites', 'api\Stores@favourites');
+    $router->post('shopping/customer/remove_from_favourites', 'api\Stores@remove_from_favourites');
+    $router->get('shopping/{subdomain_name}/get_active_stores', 'api\Stores@get_active_stores');
+    $router->get('shopping/{subdomain_name}/search/{keyword}', 'api\Stores@search');
+
+    //Store Application
     $router->get('check_shared_link_code/{subdomain_name}', 'api\Stores@check_shared_link_code');
     $router->get('client/statistic/{client_unique_code}/{download}', 'api\my_account@statistic');
     $router->post('client/txt_service', 'api\Order@txt_service');
@@ -50,7 +68,7 @@ $router->group(['prefix' => 'api', 'middleware' => ['throttle:180,60']], functio
     $router->get('get_active_stores', 'api\Stores@get_active_stores');
     $router->get('get_active_store_branches/{subdomain_name}', 'api\Stores@get_active_store_branches');
     $router->get('get_branche_items_pag/{subdomain_name}/{branch_id}', 'api\Stores@get_branche_items_pag');
-    $router->get('view_item/{item_id}', 'api\Stores@view_item');
+    $router->get('view_item/{item_id}', 'api\Stores@view_item_app');
 
 });
 
@@ -73,7 +91,6 @@ $router->group(['prefix' => 'api', 'middleware' => ['auth', 'throttle:180,60']],
     $router->get('MyId', 'api\my_account@MyId'); ##
     $router->get('My_Notifications', 'api\my_notifications@My_Notifications');
     $router->post('me/update', 'api\Authintication\MainAuth@updateaccount');
-    // $router->post('DownloadExportOrdersLabels', 'api\Order@DownloadExportOrdersLabels');
     $router->post('DownloadOrderExcel', 'api\Order@DownloadOrderExcel');
     $router->post('new_shared_link_orders', 'api\Order@new_shared_link_orders');
     $router->post('DownloadWithdrawOrders', 'api\Dashboard\Admin\Accounts@DownloadWithdrawOrders');

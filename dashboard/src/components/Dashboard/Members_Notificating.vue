@@ -13,6 +13,15 @@
             
             <div class="uk-width-1-1@s">
                 <div>
+                    <input class="uk-input uk-text-center" type="text" placeholder="order id"  v-model="Notify.order_id">
+                </div>
+                <div v-if="val_errors" style="color:red">
+                    <font v-for="error in val_errors.title" :key="error.id"> ({{error}}) </font>
+                </div>
+            </div>
+
+            <div class="uk-width-1-1@s">
+                <div>
                     <textarea class="uk-textarea uk-height-small uk-text-center" type="text" placeholder="Message"  v-model="Notify.body"></textarea>
                 </div>
                 <div v-if="val_errors" style="color:red">
@@ -44,7 +53,8 @@
                 miniload: false,
                 Notify: {
                     title:'',
-                    body:''
+                    body:'',
+                    order_id:''
                 },
                 val_errors: {},
             };
@@ -60,6 +70,7 @@
                 formData.append('member_role', this.Account_Role);
                 formData.append('title', this.Notify.title);
                 formData.append('MSG', this.Notify.body);
+                formData.append('order_id', this.Notify.order_id);
 
                 this.axios.post(process.env.VUE_APP_URL+`/api/Admin/notify`, formData)
                 .then(res => { 
@@ -78,7 +89,7 @@
 
         computed: {
             IsValid() {
-                return this.Notify.title !== '' && this.Notify.body !== '' 
+                return this.Notify.title !== '' && this.Notify.body !== ''
             }
         }
 

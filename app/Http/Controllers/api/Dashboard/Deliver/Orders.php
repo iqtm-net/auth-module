@@ -64,7 +64,8 @@ class Orders extends Controller
             Notification(
                 [$GetPoster->firebase_token], " تم تحديث حالة الطلب للبريد ".$update->track_code,
                 " تم ايصال بريد "."(".$update->product_name.")"." يمكنك تقييم عملية التوصيل من خلال قائمة البريد المكتمل. ",
-                $GetPoster->phone_number
+                $GetPoster->phone_number,
+                $update->track_code
             );
 
         }
@@ -81,7 +82,8 @@ class Orders extends Controller
                 [$GetPoster->firebase_token],
                 'حالة الطلب',
                 " لم نستطع ايصال بريد "."(".$update->receiver_full_name.")"." بسبب "."(".$update->case_details.")",
-                $GetPoster->phone_number
+                $GetPoster->phone_number,
+                $update->track_code
             );
         }
 
@@ -90,7 +92,8 @@ class Orders extends Controller
                 [$GetPoster->firebase_token], 
                 " تم استلام البريد "."(".$update->product_name.")",
                 " سوف يباشر هدهد بعملة ايصال بريدك "."(".$update->product_name.")"." الى المستلم "."(".$update->receiver_full_name.")",
-                $GetPoster->phone_number
+                $GetPoster->phone_number,
+                $update->track_code
             );
         }
 
@@ -159,12 +162,13 @@ class Orders extends Controller
     {
         $validator = Validator::make($request->all(), [
             'order_id' => 'numeric|exists:user_orders,id',
+            'delayed' => 'required',
         ]);
 
         if($validator->fails()){ return Result(Null, 400, $validator->errors()); }
 
         User_order::where('id', $request->get('order_id'))->update([
-            "delayed" => 1
+            "delayed" => ($request->get('delayed') == 'true') ? 1 : 0
         ]);
 
         return ResultNoSB("succuss");

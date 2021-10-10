@@ -209,25 +209,6 @@ class Home extends Controller
         ], 200);
     }
 
-    // public function ShowAllTopDelivers()
-    // {
-    //     $TopDelivers = User_order::select('deliver_id')->distinct('deliver_id')->pluck('deliver_id')->all();
-    //     foreach($TopDelivers as $DeliverId){
-    //         $GetDeliver = Deliver::find($DeliverId);
-    //         if($GetDeliver)
-    //         {
-    //             $RsTopDelivers[] = array(
-    //                 "id" => $GetDeliver->id,
-    //                 "Deliver" => $GetDeliver->first_name." ".$GetDeliver->last_name,
-    //                 "Total_Orders" => User_order::where('deliver_id', $DeliverId)->get()->count()
-    //             );
-    //         }
-
-    //     }
-    //     array_multisort(array_column($RsTopDelivers, 'Total_Orders'), SORT_DESC, $RsTopDelivers);
-    //     return response()->json($RsTopDelivers, 200);
-    // }
-
     public function ShowAllTopMembers()
     {
         $TopMembers = User_order::select('user_id','account_type')->distinct('user_id')->get();

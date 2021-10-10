@@ -284,10 +284,13 @@ class Accounts extends Controller
     public function updateaccount(Request $request, $type, $id)
     {   
 
-        $Columns = ValidatedColumnsExcept($type, ['subdomain_name', 'store_type', 'theme_logo', 'Deliver_Fee', 'id', 'store_theme_id', 'specialties', 'email', 'password', 'remember_token', 'created_at', 'updated_at', 'firebase_token', 'stripe_id', 'card_brand', 'card_last_four','trial_ends_at']);
+        $Columns = ValidatedColumnsExcept($type, ['subdomain_name', 'store_type', 'theme_logo', 'global_deliver_fee', 'local_deliver_fee',  'id', 'store_theme_id', 'specialties', 'email', 'password', 'remember_token', 'created_at', 'updated_at', 'firebase_token', 'stripe_id', 'card_brand', 'card_last_four','trial_ends_at']);
 
         $validator = Validator::make($request->all(), $Columns, CostumVal());
         if($validator->fails()){ return response()->json([ "errs" => $validator->errors() ], 400); }
+
+        $Columns[] = "global_deliver_fee";
+        $Columns[] = "local_deliver_fee";
 
         $requestData = $request->only(array_keys($Columns));
 
@@ -338,10 +341,16 @@ class Accounts extends Controller
             $fb_tokens = DB::table($key)->select('firebase_token')->get()->pluck('firebase_token')->chunk(1000)->toArray();
             
             foreach ($fb_tokens as $tokens){
-                Notification($tokens, $request->get('title'), $request->get('MSG'), 0);
+                Notification($tokens, $request->get('title'), $request->get('MSG'), 0, null, false);
             }
             
         }
+
+        $post = new Notification;
+        $post->MSG = $request->get('MSG');
+        $post->title = $request->get('title');
+        $post->MemberPhoneNumber = 0;
+        $post->save();
 
     }
 
@@ -361,9 +370,7 @@ class Accounts extends Controller
         $check = DB::table($request->get('member_role'))->where('id', $request->get('member_id'))->first();
 
         if($check){
-
-            Notification([$check->firebase_token], $request->get('title'), $request->get('MSG'), $check->phone_number);
-
+            Notification([$check->firebase_token], $request->get('title'), $request->get('MSG'), $check->phone_number, $request->get('order_id'), true);
         }
 
         Record_action("send message to  ".$check->first_name." ".$check->last_name."<br> Title : ".$request->get('title')."<br> MSG : ".$request->get('MSG'));
